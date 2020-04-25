@@ -8,7 +8,7 @@ import { Injector } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
 
 @NgModule({
-  declarations: [ContactFormComponent],
+  declarations: [AppComponent, ContactFormComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [ContactFormComponent],
@@ -17,7 +17,7 @@ export class AppModule {
   constructor(private injector: Injector) {
     const el = createCustomElement(ContactFormComponent, { injector });
     // const e2 = createCustomElement(AppComponent, { injector });
-    customElements.define('app-contact-form', el);
+    customElements.define('my-contact-form', el);
     // customElements.define('arjuna-app-root', e2);
   }
 }
